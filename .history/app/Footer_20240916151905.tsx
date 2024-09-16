@@ -40,25 +40,24 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col mx-10  rounded-2xl">
-        <div className="my-3 md:my-10"><Separator /></div>
+        <div className="my-10"><Separator /></div>
         <div id="footer first row" className="flex lg:flex-row flex-col justify-between ">
-            <div className="flex flex-col md:flex-row items-start justify-center gap-3 lg:gap-20">
+            <div className="flex flex-col md:flex-row items-start justify-center gap-10 lg:gap-20">
             <div className="flex flex-row gap-10">
-            <div className="flex flex-col ">
+            <div className="flex flex-col gap-3">
             <Image
   src="/assets/nexuslogo.svg"
   alt="logo"
   
-  width={320} // Base width
-  height={40} // Base height (aspect ratio will be maintained)
-  className="md:w-[320px] md:h-[40px] w-[150px] h-[20px]"
+  width={330} // Base width
+  height={320} // Base height (aspect ratio will be maintained)
+  className="md:w-[330px] md:h-[320px] w-[150px] h-[140px]"
   onClick={homeClick}
 />
 
 
             <p className=" text-sm lg:text-base font-light mt-5">3943 Irvine Boulevard,<br></br>Irvine CA 92602,<br></br>United States</p>
             </div>
-            
             <div className="flex flex-col">
             <h4 className="font-medium text-slate-800 text-sm lg:text-base">Navigation</h4>
             <ul className="text-slate-800 font-light text-sm lg:text-base">
@@ -70,9 +69,8 @@ const Footer = () => {
             </ul>
             </div>
             </div>
-            <div className="flex md:hidden w-full h-[1px] bg-gray-200"> </div>
             <div id="services here">
-            <div className="flex flex-col my-3 md:my-0">
+            <div className="flex flex-col">
             <h4 className="font-medium text-slate-800 text-sm lg:text-base">Services</h4>
             <div className="flex flex-row gap-10">
             <ul className="text-slate-800 font-light text-sm lg:text-base">
@@ -93,9 +91,9 @@ const Footer = () => {
             
             </div>
             </div>
-            <div className="flex md:hidden w-full h-[1px] bg-gray-200"> </div>
+            
             </div>
-            <div className="flex items-center mt-5 md:mt-0">
+            <div className="flex items-center">
                 <NewsletterSignup />
             </div>
         </div>

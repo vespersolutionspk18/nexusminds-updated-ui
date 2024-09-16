@@ -24,7 +24,7 @@ const ServicesSection = () => {
                 <h4 className="font-medium text-lg md:text-2xl underline text-slate-800 hover:text-purple-700">Cloud Computing</h4>
                 <h4 className="font-medium text-lg md:text-2xl underline text-slate-800 hover:text-purple-700">Startup Services</h4>
             </div>
-            <div className="flex flex-col gap-3  w-1/2 h-full items-start ml-0 md:pl-10">
+            <div className="flex flex-col gap-3  w-1/2 h-full items-start md:pl-10">
                 <h4 className="font-medium text-lg md:text-2xl underline text-slate-800 hover:text-purple-700">Blockchain</h4>
                 <h4 className="font-medium text-lg md:text-2xl underline text-slate-800 hover:text-purple-700">Artificial Intelligence</h4>
                 <h4 className="font-medium text-lg md:text-2xl underline text-slate-800 hover:text-purple-700">ERP Consulting</h4>

@@ -44,10 +44,10 @@ const ContactSection = () => {
             </div>
         </div>
         <div className="">
-        <div id="buttons container" className="mt-7 mx-10 md:mx-0 flex flex-col md:flex-row items-center justify-center md:items-start md:justify-start">
+        <div id="buttons container" className="mt-7 flex flex-col md:flex-row items-center justify-center md:items-start md:justify-start">
                 <div
                 id="button"
-                className="group ml-10 md:ml-0 bg-[#ffffffa1] hover:bg-white h-[44px] flex-row font-sans text-slate-800 text-[16px] py-1 px-1 font-regular rounded-full flex items-center justify-between w-[165px] transition-width duration-500 ease-in-out hover:transition-width hover:ease-in-out hover:w-[180px]"
+                className="group bg-[#ffffffa1] hover:bg-white h-[44px] flex-row font-sans text-slate-800 text-[16px] py-1 px-1 font-regular rounded-full flex items-center justify-between w-[165px] transition-width duration-500 ease-in-out hover:transition-width hover:ease-in-out hover:w-[180px]"
                 onClick={getInTouchClick}
                     >
                 <div className="ml-3 text-lg">

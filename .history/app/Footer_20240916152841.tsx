@@ -95,7 +95,7 @@ const Footer = () => {
             </div>
             <div className="flex md:hidden w-full h-[1px] bg-gray-200"> </div>
             </div>
-            <div className="flex items-center mt-5 md:mt-0">
+            <div className="flex items-center">
                 <NewsletterSignup />
             </div>
         </div>

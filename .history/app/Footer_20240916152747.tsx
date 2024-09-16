@@ -72,7 +72,7 @@ const Footer = () => {
             </div>
             <div className="flex md:hidden w-full h-[1px] bg-gray-200"> </div>
             <div id="services here">
-            <div className="flex flex-col my-3 md:my-0">
+            <div className="flex flex-col">
             <h4 className="font-medium text-slate-800 text-sm lg:text-base">Services</h4>
             <div className="flex flex-row gap-10">
             <ul className="text-slate-800 font-light text-sm lg:text-base">
@@ -93,9 +93,9 @@ const Footer = () => {
             
             </div>
             </div>
-            <div className="flex md:hidden w-full h-[1px] bg-gray-200"> </div>
+            
             </div>
-            <div className="flex items-center mt-5 md:mt-0">
+            <div className="flex items-center">
                 <NewsletterSignup />
             </div>
         </div>

@@ -17,7 +17,7 @@ const ContactSection = () => {
     };
 
   return (
-    <div className="md:mx-10 mx-5 mb-32 mt-32 gap-10 bg-radial-gradient pt-10 md:pt-32 pb-10 md:pb-32 rounded-2xl flex flex-col md:flex-row text-white">
+    <div className="mx-10 mb-32 mt-32 gap-10 bg-radial-gradient pt-10 md:pt-32 pb-10 md:pb-32 rounded-2xl flex flex-col md:flex-row text-white">
         <div className="w-full md:w-[40%] md:mx-10 flex flex-col items-center justify-center md:items-start md:justify-start">
             <h3 className="md:text-5xl text-3xl font-medium mx-10 md:mx-0">Get an estimate in 10 minutes or less</h3>
             <p className="mt-5  text-slate-200 mx-10 md:mx-0">Start your journey with Nexus Minds today. Our efficient, cost-effective solutions ensure your business fully leverages modern technologies for success.</p>
@@ -44,10 +44,10 @@ const ContactSection = () => {
             </div>
         </div>
         <div className="">
-        <div id="buttons container" className="mt-7 mx-10 md:mx-0 flex flex-col md:flex-row items-center justify-center md:items-start md:justify-start">
+        <div id="buttons container" className="mt-7 flex flex-col md:flex-row items-center justify-center md:items-start md:justify-start">
                 <div
                 id="button"
-                className="group ml-10 md:ml-0 bg-[#ffffffa1] hover:bg-white h-[44px] flex-row font-sans text-slate-800 text-[16px] py-1 px-1 font-regular rounded-full flex items-center justify-between w-[165px] transition-width duration-500 ease-in-out hover:transition-width hover:ease-in-out hover:w-[180px]"
+                className="group bg-[#ffffffa1] hover:bg-white h-[44px] flex-row font-sans text-slate-800 text-[16px] py-1 px-1 font-regular rounded-full flex items-center justify-between w-[165px] transition-width duration-500 ease-in-out hover:transition-width hover:ease-in-out hover:w-[180px]"
                 onClick={getInTouchClick}
                     >
                 <div className="ml-3 text-lg">
