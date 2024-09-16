@@ -61,7 +61,7 @@ const FaqSection = () => {
                         <AccordionItem value="item-3">
                             <AccordionTrigger>Why choose Nexus?</AccordionTrigger>
                             <AccordionContent>
-                            At Nexus, we are as committed to our clients&apos; vision as we are to the software we create. With over 20 years of experience, we take pride in using our expertise to help innovators turn their ideas into impactful products that enhance user experiences and transform industries on a large scale.
+                            At Nexus, we are as committed to our clients' vision as we are to the software we create. With over 20 years of experience, we take pride in using our expertise to help innovators turn their ideas into impactful products that enhance user experiences and transform industries on a large scale.
                             </AccordionContent>
                         </AccordionItem>
                     </div>

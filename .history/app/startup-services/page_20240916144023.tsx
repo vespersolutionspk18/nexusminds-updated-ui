@@ -16,7 +16,7 @@ import Footer from '../Footer';
 import ContactSection from '../ContactSection';
 
 
-const Page = () => {
+const page = () => {
   const router = useRouter();
   
     const getInTouchClick = () => {
