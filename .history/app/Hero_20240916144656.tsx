@@ -16,7 +16,7 @@ const Hero = () => {
 
     return (
         <div className="md:mx-10 mx-5 flex flex-row  my-2 rounded-3xl bg-radial-gradient pt-16 md:pt-32  pb-16">
-            <div id="left content of hero" className="mx-10 md:mx-20 my-5 md:my-10 w-full md:w-1/2">
+            <div id="left content of hero" className="mx-20 my-5 md:my-10 w-full md:w-1/2">
                 <h1 className="text-white font-sans text-4xl md:text-6xl font-semibold md:leading-[72px] mr-20">Transforming tech solutions for a new digital age.</h1>
                 <h5 className="text-white font-sans text-xl font-light tracking-tight mt-7">Unlock the power of modern technology: efficient, streamlined, and built for a digital-first world.</h5>
                 <div id="buttons container" className="mt-7 flex flex-row">

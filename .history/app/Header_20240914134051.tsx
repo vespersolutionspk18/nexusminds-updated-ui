@@ -32,11 +32,11 @@ const Header = () => {
 
   return (
     <div>
-      <div className="bg-white  md:px-10 px-5 w-full my-2  h-[64px]  flex items-center justify-between">
+      <div className="bg-white  px-10 w-full my-2  h-[64px]  flex items-center justify-between">
         <div className="flex-1 flex items-center justify-start">
           <Image src="/assets/nexuslogo.svg" width={250} height={250} alt="Nexus Minds" className="ml-3"/>
         </div>
-        <div className="flex-1 items-center justify-center hidden md:flex">
+        <div className="flex-1 flex items-center justify-center">
           <NavigationMenuDemo />
         </div>
         <div className="flex-1 flex items-center justify-end">

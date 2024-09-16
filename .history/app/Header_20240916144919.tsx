@@ -36,7 +36,7 @@ const Header = () => {
         <div className="flex-1 flex items-center justify-start">
           <Image src="/assets/nexuslogo.svg" width={250} height={250} alt="Nexus Minds" className="ml-3"/>
         </div>
-        <div className="flex-1 items-center justify-center hidden md:flex">
+        <div className="flex-1 flex items-center justify-center">
           <NavigationMenuDemo />
         </div>
         <div className="flex-1 flex items-center justify-end">
