@@ -6,7 +6,6 @@ import ButtonArrow from "@/public/assets/buttonarrow.svg";
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { NavigationMenuDemo } from './headMenuNav';
-import { HeaderDropDown } from './HeaderDropDown';
 
 const Header = () => {
   const router = useRouter();
@@ -52,9 +51,6 @@ const Header = () => {
             <div className="bg-[#E8E9E9] rounded-full h-[36px] w-[36px] flex items-center justify-center transition-transform duration-500 ease-in-out group-hover:rotate-45">
               <ButtonArrow className="h-[24px] w-[24px]" />
             </div>
-          </div>
-          <div className="block md:hidden">
-            <HeaderDropDown />
           </div>
         </div>
       </div>

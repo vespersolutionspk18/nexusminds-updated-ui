@@ -53,7 +53,7 @@ const Header = () => {
               <ButtonArrow className="h-[24px] w-[24px]" />
             </div>
           </div>
-          <div className="block md:hidden">
+          <div>
             <HeaderDropDown />
           </div>
         </div>
