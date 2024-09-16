@@ -40,8 +40,8 @@ const Hero = () => {
                {/* Use the Spline component here <SplineComponent /> */}
                <Image
         src="/assets/cubic.png" 
-        width={1024}
-        height={1024}
+        width={720}
+        height={720}
         alt=""
       />
             </div>

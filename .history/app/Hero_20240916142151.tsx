@@ -39,9 +39,9 @@ const Hero = () => {
             <div className="text-white w-1/2 h-[506px] overflow-hidden hidden md:flex items-center justify-center">
                {/* Use the Spline component here <SplineComponent /> */}
                <Image
-        src="/assets/cubic.png" 
-        width={1024}
-        height={1024}
+        src="https://prod.spline.design/tfiaMWCfTnu1e1KB/scene.splinecode" 
+        width={512}
+        height={512}
         alt=""
       />
             </div>
