@@ -1,8 +1,9 @@
 "use client"
 
-import * as React from "react"
-import Link from "next/link"
 
+import Link from "next/link"
+import { useRouter } from 'next/navigation';
+import React, { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils"
 
 import {
@@ -17,43 +18,66 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Cloud Computing",
-    href: "/cloud-computing",
+    title: "Cloud Consulting",
+    href: "/services?tab=cloud-consulting",
     description:
       "Empowering Your Business with Scalable Cloud Solutions",
   },
   {
     title: "Web Development",
-    href: "/web-development",
+    href: "/services?tab=web-development",
     description:
       "Crafting High-Performance Websites and Web Applications",
   },
   {
     title: "Artificial Intelligence",
-    href: "/artificial-intelligence",
+    href: "/services?tab=artificial-intelligence",
     description:
       "Transforming Businesses with Intelligent AI Solutions",
   },
   {
-    title: "DevOps",
-    href: "/devops",
-    description: "Streamlining Development with Seamless DevOps Integration",
-  },
-  {
-    title: "UI \ UX",
-    href: "/uiux",
-    description:
-      "Crafting Intuitive and Engaging User Experiences",
-  },
-  {
     title: "Mobile Development",
-    href: "/mobile-development",
+    href: "/services?tab=mobile-development",
+    description: "Streamlining Development with Seamless Mobile Solutions",
+  },
+  {
+    title: "Startup Services",
+    href: "/services?tab=startup-services",
     description:
-      "Building Seamless and Powerful Mobile Solutions",
+      "Building Robust and Scalable Solutions for Startups",
+  },
+  {
+    title: "Blockchain Development",
+    href: "services?tab=blockchain-development",
+    description:
+      "Blockchain Solutions for Secure and Transparent Transactions",
+  },
+  {
+    title: "ERP Consulting",
+    href: "services?tab=erp-consulting",
+    description:
+      "ERP Solutions for Streamlined Business Operations",
+  },
+  {
+    title: "Software Development",
+    href: "services?tab=software-development",
+    description:
+      "Enterprise Software Solutions for Enhanced Efficiency",
+  },
+  {
+    title: "IoT Solutions",
+    href: "services?tab=iot-solutions",
+    description:
+      "Intelligent IoT Solutions for Seamless Connectivity",
   },
 ]
 
 export function NavigationMenuDemo() {
+  const router = useRouter();
+ 
+  const casestudiesclick = () => {
+    router.push('/#projectcards');
+  };
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -67,7 +91,7 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <NavigationMenuTrigger><p className="text-lg">Services</p></NavigationMenuTrigger>
           <NavigationMenuContent className="z-50 bg-white">
-            <ul className="grid w-[400px] gap-1 md:gap-3 p-2 md:p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+            <ul className="grid w-[400px] gap-1 md:gap-3 p-2 md:p-4 md:w-[700px] md:grid-cols-3 lg:w-[800px]">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
@@ -81,11 +105,9 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-  <Link href="/#case-studies" legacyBehavior passHref>
-    <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+  <NavigationMenuLink className={navigationMenuTriggerStyle()} onClick={casestudiesclick}>
     <p className="text-lg">Case Studies</p>
-    </NavigationMenuLink>
-  </Link>
+  </NavigationMenuLink>
 </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/about" legacyBehavior passHref>

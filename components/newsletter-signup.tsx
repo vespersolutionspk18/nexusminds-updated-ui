@@ -35,7 +35,7 @@ export function NewsletterSignup() {
         </div>
         <p className="text-sm text-gray-600 ml-1">
           I agree with Nexus Mind&apos;s{' '}
-          <a href="/cloud-consulting" className="text-gray-600 underline">
+          <a href="/" className="text-gray-600 underline">
             Privacy policy
           </a>
         </p>

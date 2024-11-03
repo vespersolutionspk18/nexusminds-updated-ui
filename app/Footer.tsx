@@ -21,23 +21,36 @@ const Footer = () => {
         router.push('/contact');
       };
       const esdClick = () => {
-        router.push('/enterprise-software-development');
+        router.push('/services?tab=software-development');
       };
       const cloudClick = () => {
-        router.push('/cloud-consulting');
+        router.push('/services?tab=cloud-consulting');
       };
       const aimlClick = () => {
-        router.push('/artificial-intelligence');
+        router.push('/services?tab=artificial-intelligence');
       };
       const webClick = () => {
-        router.push('/web-development');
+        router.push('/services?tab=web-development');
       };
       const mobileClick = () => {
-        router.push('/mobile-development');
+        router.push('/services?tab=mobile-development');
       };
       const servicesClick = () => {
-        router.push('/#servicesection');
+        router.push('/services');
       };
+      const blockchainClick = () => {
+        router.push('/services?tab=blockchain-development');
+      };
+      const startupClick = () => {
+        router.push('/services?tab=startup-services');
+      };
+      const erpClick = () => {
+        router.push('/services?tab=erp-consulting');
+      };
+      const iotClick = () => {
+        router.push('/services?tab=iot-solutions');
+      };
+      
 
   return (
     <div className="flex flex-col mx-5 md:mx-10  rounded-2xl">
@@ -57,7 +70,7 @@ const Footer = () => {
 />
 
 
-            <p className=" text-sm lg:text-base font-light mt-5">3943 Irvine Boulevard,<br></br>Irvine CA 92602,<br></br>United States</p>
+            <p className=" text-sm lg:text-base font-light mt-5">7901 4th Street North STE 300,<br></br>St. Petersburg, FL 33702,<br></br>United States</p>
             </div>
             
             <div className="flex flex-col">
@@ -65,7 +78,7 @@ const Footer = () => {
             <ul className="text-slate-800 font-light text-sm lg:text-base">
                 <li onClick={homeClick} className="hover:text-purple-700">Home</li>
                 
-                <li  className="hover:text-purple-700"><Link href="/#servicessection">Services</Link></li>
+                <li  className="hover:text-purple-700 cursor-pointer" onClick={servicesClick}>Services</li>
                 <li onClick={aboutClick} className="hover:text-purple-700">About</li>
                 <li onClick={contactClick} className="hover:text-purple-700">Contact</li>
             </ul>
@@ -84,11 +97,11 @@ const Footer = () => {
                 <li onClick={mobileClick} className="hover:text-purple-700">Mobile Development</li>
             </ul>
             <ul className="text-slate-800 font-light text-sm lg:text-base">
-                <li onClick={esdClick} className="hover:text-purple-700">Blockchain</li>
-                <li onClick={cloudClick} className="hover:text-purple-700">Startup Services</li>
-                <li onClick={webClick} className="hover:text-purple-700">ERP Consulting</li>
-                <li onClick={aimlClick} className="hover:text-purple-700">IoT Solutions</li>
-                <li onClick={mobileClick} className="hover:text-purple-700">UI/UX</li>
+                <li onClick={blockchainClick} className="hover:text-purple-700">Blockchain</li>
+                <li onClick={startupClick} className="hover:text-purple-700">Startup Services</li>
+                <li onClick={erpClick} className="hover:text-purple-700">ERP Consulting</li>
+                <li onClick={iotClick} className="hover:text-purple-700">IoT Solutions</li>
+                
             </ul>
             </div>
             

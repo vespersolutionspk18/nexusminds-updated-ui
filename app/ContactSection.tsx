@@ -17,10 +17,10 @@ const ContactSection = () => {
     };
 
   return (
-    <div className="md:mx-10 mx-5 mb-32 mt-32 gap-10 bg-radial-gradient pt-10 md:pt-32 pb-10 md:pb-32 rounded-2xl flex flex-col md:flex-row text-white">
+    <div className="md:mx-10 mx-5 mb-32 mt-10 md:mt-32 gap-10 bg-radial-gradient pt-10 md:pt-32 pb-10 md:pb-32 rounded-2xl flex flex-col md:flex-row text-white">
         <div className="w-full md:w-[40%] md:mx-10 flex flex-col items-center justify-center md:items-start md:justify-start">
-            <h3 className="md:text-5xl text-3xl font-medium mx-10 md:mx-0">Get an estimate in 10 minutes or less</h3>
-            <p className="mt-5  text-slate-200 mx-10 md:mx-0">Start your journey with Nexus Minds today. Our efficient, cost-effective solutions ensure your business fully leverages modern technologies for success.</p>
+            <h3 className="md:text-5xl text-xl font-medium mx-5 md:mx-0">Get an estimate in 10 minutes or less</h3>
+            <p className="mt-5 text-justify text-sm md:text-lg text-slate-200 mx-5 md:mx-0">Start your journey with Nexus Minds today. Our efficient, cost-effective solutions ensure your business fully leverages modern technologies for success.</p>
         </div>
         <div className="w-[50%] flex flex-col md:mt-4 ">
         <div id="first" className="hidden md:flex gap-2 flex-row ">

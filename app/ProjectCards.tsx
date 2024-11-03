@@ -12,7 +12,7 @@ export function ProjectCards({ id }: AppleCardsCarouselDemoProps) {
     <Card key={card.src} card={{...card}} index={index} layout={true} />
   ));  
   return (
-    <div className="mx-5 md:mx-10 rounded-2xl  mt-32 ">
+    <div className="mx-5 md:mx-10 rounded-2xl  mt-32 " id="projectcards">
         <div id={id} className="w-full h-full rounded-2xl pt-10 pb-10  bg-radial-gradient">
       <h2 className="max-w-7xl pl-4 mx-10 mt-5 text-4xl md:text-5xl font-semibold text-white tracking-tight ">
         Case Studies

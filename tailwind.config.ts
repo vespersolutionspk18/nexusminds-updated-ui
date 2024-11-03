@@ -38,6 +38,7 @@ const config: Config = {
         'azure-image': "url('/assets/azureimage.jpeg')",
         'gcp-image': "url('/assets/googleimage.jpeg')",
         'heroku-image': "url('/assets/heroku.webp')",
+        'services-bg': "url('/assets/servebg.jpeg')",
       },
     },
   },
