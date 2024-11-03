@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, Suspense } from 'react';
+import React, { useEffect, useState } from 'react';
 import SerTabs from './SerTabs';
 import { useSearchParams } from 'next/navigation';
 import Header from '../Header';
@@ -23,9 +23,7 @@ const Page = () => {
     <div>
       <Header />
       <SerHero />
-      <Suspense fallback={<div>Loading tabs...</div>}>
-        <SerTabs tabId={tabId} />
-      </Suspense>
+      <SerTabs tabId={tabId} />
       <ContactSection />
       <Footer />
     </div>
