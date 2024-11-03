@@ -1,9 +1,8 @@
 "use client"
 
-
 import Link from "next/link"
 import { useRouter } from 'next/navigation';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { cn } from "@/lib/utils"
 
 import {
@@ -48,25 +47,25 @@ const components: { title: string; href: string; description: string }[] = [
   },
   {
     title: "Blockchain Development",
-    href: "services?tab=blockchain-development",
+    href: "/services?tab=blockchain-development",
     description:
       "Blockchain Solutions for Secure and Transparent Transactions",
   },
   {
     title: "ERP Consulting",
-    href: "services?tab=erp-consulting",
+    href: "/services?tab=erp-consulting",
     description:
       "ERP Solutions for Streamlined Business Operations",
   },
   {
     title: "Software Development",
-    href: "services?tab=software-development",
+    href: "/services?tab=software-development",
     description:
       "Enterprise Software Solutions for Enhanced Efficiency",
   },
   {
     title: "IoT Solutions",
-    href: "services?tab=iot-solutions",
+    href: "/services?tab=iot-solutions",
     description:
       "Intelligent IoT Solutions for Seamless Connectivity",
   },
@@ -105,14 +104,14 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-  <NavigationMenuLink className={navigationMenuTriggerStyle()} onClick={casestudiesclick}>
-    <p className="text-lg">Case Studies</p>
-  </NavigationMenuLink>
-</NavigationMenuItem>
+          <NavigationMenuLink className={navigationMenuTriggerStyle()} onClick={casestudiesclick}>
+            <p className="text-lg">Case Studies</p>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/about" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            <p className="text-lg">About Us</p>
+              <p className="text-lg">About Us</p>
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
@@ -125,24 +124,32 @@ const ListItem = React.forwardRef<
   React.ElementRef<"a">,
   React.ComponentPropsWithoutRef<"a"> & { href: string; title: string }
 >(({ className, title, children, href, ...props }, ref) => {
+  const router = useRouter();
+
+  // Function to handle manual navigation
+  const handleNavigation = (event: React.MouseEvent) => {
+    event.preventDefault(); // Prevent default link behavior
+    router.push(href);      // Trigger the tab change by updating the URL
+  };
+
   return (
     <li>
-      <Link href={href} legacyBehavior passHref>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </Link>
+      <a
+        ref={ref}
+        href={href}
+        className={cn(
+          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+          className
+        )}
+        onClick={handleNavigation} // Manually trigger navigation on click
+        {...props}
+      >
+        <div className="text-sm font-medium leading-none">{title}</div>
+        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+          {children}
+        </p>
+      </a>
     </li>
-  )
+  );
 });
 ListItem.displayName = "ListItem";

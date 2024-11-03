@@ -7,58 +7,39 @@ import Footer from '../Footer';
 import ContactSection from '../ContactSection';
 import SerHero from './SerHero';
 
-// Dynamically import SerTabs
+// Dynamically import SerTabs to prevent server-side rendering
 const SerTabs = dynamic(() => import('./SerTabs'), { ssr: false });
 
 const Page = () => {
   const [tabId, setTabId] = useState<string>('software-development');
 
   useEffect(() => {
-    // Function to update tabId from URL query string
+    // Function to get the tab from the URL query string
     const updateTabFromURL = () => {
       const searchParams = new URLSearchParams(window.location.search);
       const tab = searchParams.get('tab');
       if (tab) {
-        setTabId(tab); // Update tabId with the new query param
+        setTabId(tab);  // Update tabId if it differs from the current one
       }
     };
 
-    // Initially set the tabId from the URL when the page loads
+    // Set tabId when the component mounts
     updateTabFromURL();
 
-    // Listen for URL changes (when history changes, including tab clicks)
+    // Listen for changes in the URL to update the tabId
     window.addEventListener('popstate', updateTabFromURL);
 
-    // Cleanup event listener on unmount
+    // Clean up the event listener
     return () => {
       window.removeEventListener('popstate', updateTabFromURL);
     };
-  }, []);
-
-  useEffect(() => {
-    // Listen for manual tab changes (when clicking links that update the URL)
-    const handleTabChange = () => {
-      const searchParams = new URLSearchParams(window.location.search);
-      const tab = searchParams.get('tab');
-      if (tab && tab !== tabId) {
-        setTabId(tab); // Ensure tabId state updates if different
-      }
-    };
-
-    // Trigger handleTabChange on URL change
-    window.addEventListener('popstate', handleTabChange);
-
-    // Cleanup listener on unmount
-    return () => {
-      window.removeEventListener('popstate', handleTabChange);
-    };
-  }, [tabId]);
+  }, [tabId]);  // This hook will re-run whenever tabId changes
 
   return (
     <div>
       <Header />
       <SerHero />
-      {/* Pass the current tabId to SerTabs */}
+      {/* Pass the tabId to SerTabs */}
       <SerTabs tabId={tabId} />
       <ContactSection />
       <Footer />
