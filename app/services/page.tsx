@@ -8,7 +8,7 @@ import Footer from '../Footer';
 import ContactSection from '../ContactSection';
 import SerHero from './SerHero';
 
-const TabsWithSearchParams = () => {
+const ClientOnlyTabs = () => {
   const searchParams = useSearchParams();
   const [tabId, setTabId] = useState<string>('software-development');
 
@@ -27,8 +27,8 @@ const Page = () => {
     <div>
       <Header />
       <SerHero />
-      {/* Ensure the TabsWithSearchParams component uses the client-side rendering properly */}
-      <TabsWithSearchParams />
+      {/* Render the ClientOnlyTabs only on the client-side */}
+      <ClientOnlyTabs />
       <ContactSection />
       <Footer />
     </div>
