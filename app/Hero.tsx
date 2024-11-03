@@ -34,7 +34,7 @@ const Hero = () => {
                     </div>
 
                 </div>
-                <p className="text-slate-400 font-light pt-5">Driving the future with advanced, customized solutions that empower innovation and shape the digital landscape</p>
+                <p className="text-slate-400 font-light pt-5 pr-5 md:pr-0">Driving the future with advanced, customized solutions that empower innovation and shape the digital landscape</p>
             </div>
             <div className="text-white w-1/2 h-[506px] overflow-hidden hidden md:flex items-center justify-center">
                {/* Use the Spline component here <SplineComponent /> */}
