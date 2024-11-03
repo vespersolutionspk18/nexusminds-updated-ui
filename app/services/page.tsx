@@ -7,39 +7,58 @@ import Footer from '../Footer';
 import ContactSection from '../ContactSection';
 import SerHero from './SerHero';
 
-// Dynamically import SerTabs to prevent server-side rendering
+// Dynamically import SerTabs
 const SerTabs = dynamic(() => import('./SerTabs'), { ssr: false });
 
 const Page = () => {
   const [tabId, setTabId] = useState<string>('software-development');
 
   useEffect(() => {
-    // Function to update the tabId from the URL query string
+    // Function to update tabId from URL query string
     const updateTabFromURL = () => {
       const searchParams = new URLSearchParams(window.location.search);
       const tab = searchParams.get('tab');
       if (tab) {
-        setTabId(tab);  // Update tabId based on the URL
+        setTabId(tab); // Update tabId with the new query param
       }
     };
 
-    // Update the tab on component mount
+    // Initially set the tabId from the URL when the page loads
     updateTabFromURL();
 
-    // Listen for changes in the URL (when the user clicks a different tab)
+    // Listen for URL changes (when history changes, including tab clicks)
     window.addEventListener('popstate', updateTabFromURL);
 
-    // Clean up the event listener when the component unmounts
+    // Cleanup event listener on unmount
     return () => {
       window.removeEventListener('popstate', updateTabFromURL);
     };
   }, []);
 
+  useEffect(() => {
+    // Listen for manual tab changes (when clicking links that update the URL)
+    const handleTabChange = () => {
+      const searchParams = new URLSearchParams(window.location.search);
+      const tab = searchParams.get('tab');
+      if (tab && tab !== tabId) {
+        setTabId(tab); // Ensure tabId state updates if different
+      }
+    };
+
+    // Trigger handleTabChange on URL change
+    window.addEventListener('popstate', handleTabChange);
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener('popstate', handleTabChange);
+    };
+  }, [tabId]);
+
   return (
     <div>
       <Header />
       <SerHero />
-      {/* Render SerTabs dynamically with the current tabId */}
+      {/* Pass the current tabId to SerTabs */}
       <SerTabs tabId={tabId} />
       <ContactSection />
       <Footer />
