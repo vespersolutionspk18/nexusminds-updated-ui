@@ -96,7 +96,7 @@ const tabs: Tab[] = [
     label: 'IoT Solutions',
     image: '/assets/iot-solutions.jpg',
     heading: 'IoT Solutions',
-    paragraph: '<p>To achieve success in IoT solutions, it&apos;s crucial to combine robust connectivity with cutting-edge sensor technology, while maintaining a focus on scalability and security. Nexus delivers the perfect balance of technical expertise and industry knowledge to help you thrive in the rapidly growing IoT market.<br></br></p><p><b>Our Services Include:</b></p><ul><li>&#x2022; Device Integration & Connectivity</li><li>&#x2022; Data Management & Analytics</li><li>&#x2022; Security & Compliance</li><li>&#x2022; Continuous Monitoring & Optimization</li></ul>',
+    paragraph: '<p>To achieve success in IoT solutions, it&apos;s crucial to combine robust connectivity with cutting-edge sensor technology, while maintaining a focus on scalability and security. Integris Solutions delivers the perfect balance of technical expertise and industry knowledge to help you thrive in the rapidly growing IoT market.<br></br></p><p><b>Our Services Include:</b></p><ul><li>&#x2022; Device Integration & Connectivity</li><li>&#x2022; Data Management & Analytics</li><li>&#x2022; Security & Compliance</li><li>&#x2022; Continuous Monitoring & Optimization</li></ul>',
     buttonText: 'Get In Touch',
     buttonRoute: '/management-consulting',
   },
